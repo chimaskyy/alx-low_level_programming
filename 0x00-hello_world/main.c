@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	return (o);
+	return (0);
 
 }
