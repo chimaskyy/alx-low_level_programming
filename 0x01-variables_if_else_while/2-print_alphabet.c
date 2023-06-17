@@ -3,7 +3,7 @@
 /**
  * main - Entry point of the program
  * Description: Print alphabets in loswecase
- * Return: 0 (success)
+ * Return: Always 0 (success)
  */
 
 int main(void)
