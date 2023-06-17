@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point of the program
- * Description: Print alphabets in loswecase
+ * Description 'print alphabets in lowercase'
  * Return: Always 0 (success)
  */
 
