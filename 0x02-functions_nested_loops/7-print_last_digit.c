@@ -2,6 +2,7 @@
 
 /**
  * print_last_digit - Entry point
+ * @n: Number to input
  * Return: Always 0
  */
 
