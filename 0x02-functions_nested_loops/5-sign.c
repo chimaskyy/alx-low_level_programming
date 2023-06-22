@@ -2,7 +2,7 @@
 
 /**
  * print_sign - Entry point
- * @n - argument of the function
+ * @n: Argument of the function
  * Return: Always 0
  */
 
