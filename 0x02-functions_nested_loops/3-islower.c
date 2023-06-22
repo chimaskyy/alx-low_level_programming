@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _islower - Entry point
- * Description: 'write function that checks for lowercase'
+ * _islower -  Write function that checks lowercase
+ * @c: Number to be inputed
  * Return: Always 0
  */
 
