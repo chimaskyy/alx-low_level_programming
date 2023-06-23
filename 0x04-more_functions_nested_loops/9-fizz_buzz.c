@@ -3,7 +3,7 @@
 /**
  * main - FizzBuzz
  * Return: Always 0
- vi */
+ */
 
 int main(void)
 {
