@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * priny_rev - Print a string  in revrese followed by new linr
- * @s Stringe
- * REturn: 0
+ * print_rev - Print a string  in revrese followed by new linr
+ * @s: Stringe
+ * Return: 0
  */
 
 void print_rev(char *s)
