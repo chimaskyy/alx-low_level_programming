@@ -3,7 +3,7 @@
 /**
  * print_number - Fucton that prints an integer
  * @n: Integer input number
- * Return: 0
+ * Return: No return
  */
 
 void print_number(int n)
@@ -18,7 +18,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		num = -n;
+		num = -1 * n;
 	}
 	if (num / 10 != 0)
 	{
