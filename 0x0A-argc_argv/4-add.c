@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * main - A program that adds positive numbers
@@ -7,20 +9,20 @@
  * @argv: arguement vector
  * Return: 0
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int i;
 	unsigned int j;
 
-	sum = 0;
+	unsigned int sum = 0;
 
 	char *s;
 
 	if (argc > 1)
 	{
-		for (i - 1; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			s = argv[1];
+			s = argv[i];
 
 			for (j = 0; j < strlen(s); j++)
 			{
@@ -32,7 +34,7 @@ int main(int argc, char *argv)
 			}
 
 			sum += atoi(s);
-			s++;
+			
 		}
 		printf("%d\n", sum);
 	}
