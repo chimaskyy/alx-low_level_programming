@@ -5,42 +5,38 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i;
-	char c, *s;
-	float f;
-	const char *j;
+	unsigned int i = 0;
+	char arr_specifier[3] = "%", *str;
 	va_list args_list;
 
 	va_start(args_list, format);
-	j = format;
-	while (*j)
+	while (format != NULL && *(format + i) != '\0')
 	{
-		if (*j == 'i')
+		arr_specifier[1] = *(format + i);
+		switch (*(format + i))
 		{
-			i = va_arg(args_list, int);
-			printf("%d, ", i);
+			case 'c':
+				printf(arr_specifier, va_arg(args_list, int));
+				break;
+			case 'i':
+				printf(arr_specifier, va_arg(args_list, int));
+				break;
+			case 'f':
+				printf(arr_specifier, va_arg(args_list, double));
+				break;
+			case 's':
+				str = va_arg(args_list, char *);
+				if (str == NULL)
+					str = "(nil)";
+				printf(arr_specifier, str);
+				break;
+			default:
+				i++;
+				continue;
 		}
-		else if (*j == 'c')
-		{
-			c = va_arg(args_list, int);
-			printf("%c, ", c);
-		}
-		else if (*j == 'f')
-		{
-			f = va_arg(args_list, double);
-			printf("%f, ", f);
-		}
-		else if (*j == 's')
-		{
-			s = va_arg(args_list, char*);
-			if (s == NULL)
-			{
-				printf("(nil)");
-			}
-			else
-				printf("%s", s);
-		}
-		j++;
+		if (format[i + 1] != '\0')
+			printf(", ");
+		i++;
 	}
 	va_end(args_list);
 	printf("\n");
