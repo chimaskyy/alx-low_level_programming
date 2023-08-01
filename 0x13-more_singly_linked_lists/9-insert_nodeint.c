@@ -23,10 +23,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		printf("Allocation failed");
 		return (NULL);
 	}
-	/* check if head is pointing to a null address*/
-	if (*head == NULL)
+	/* check if head is pointing to a null address 0r position is 0*/
+	if (*head == NULL || idx == 0)
 	{
-		return (NULL);
+		newNode->next = *head;
+		*head = newNode;
 	}
 
 	/* i is used to iterate through the idex of the elements */
