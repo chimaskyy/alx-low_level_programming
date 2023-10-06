@@ -11,7 +11,7 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *curr_item;
 	int first_print = 0;
 
-	if (ht == NULL)
+	if (!ht || !ht->size)
 		return;
 
 
