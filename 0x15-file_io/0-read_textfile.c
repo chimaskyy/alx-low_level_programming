@@ -10,7 +10,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file;
+	int  file;
 	int r;
 	int w;
 	/*Buffer temporally stores content of the file to read*/
