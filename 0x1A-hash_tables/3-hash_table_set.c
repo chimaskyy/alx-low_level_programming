@@ -32,7 +32,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     }    
     
     if (ht->array[idx] == NULL)
-        ht->array[idx] == new_item;
+    {
+        ht->array[idx] = new_item;
+    }
     else
     {
         new_item->next = ht->array[idx];
