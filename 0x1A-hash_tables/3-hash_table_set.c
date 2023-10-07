@@ -24,21 +24,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->value = strdup(value);
 	new_node->next = NULL;
 	if (ht->array[idx] == NULL)
-	{
 		ht->array[idx] = new_node;
+	else if (strcmp(ht->array[idx]->key, key) == 0)
+	{
+		free(ht->array[idx]->value);
+		free(new_node->key);
+		free(new_node->value);
+		free(new_node);
+		ht->array[idx]->value = strdup(value);
 	}
 	else
 	{
-		if (strcmp(ht->array[idx]->key, key) == 0)
-		{
-			ht->array[idx]->value = strdup(value);
-		}
-		else
-		{
-			new_node->next = ht->array[idx];
-			ht->array[idx] = new_node;
-		}
-
+		new_node->next = ht->array[idx];
+		ht->array[idx] = new_node;
 	}
 	return (1);
 }
