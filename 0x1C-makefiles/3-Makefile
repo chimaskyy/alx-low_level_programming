@@ -1,0 +1,25 @@
+# usefull makefile
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(patsubst %.c,%.o,$(SRC))
+NAME = school
+RM = rm -f
+
+# creating executable
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# removing temporary Emacs and Vim files with executable
+clean:
+	$(RM) *~ $(NAME)
+
+# deleting object files
+oclean:
+	$(RM) $(OBJ)
+
+# removing temporary Emacs and Vim files, executable and obj files
+fclean: clean oclean
+
+# forcing recompilation of all source files
+re: fclean all
