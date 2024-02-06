@@ -30,3 +30,16 @@ int linear_search(int *array, size_t size, int value)
 
 	return (-1);
 }
+
+/*int findmatch(int *array, int size)
+{
+	int i;
+	for (i = 1; i < size; i++)
+	{
+		if (array[i] == i)
+		{
+			return array[i];
+		}
+	}
+	return -1;
+}*/
