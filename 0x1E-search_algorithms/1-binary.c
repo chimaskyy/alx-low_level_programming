@@ -49,7 +49,7 @@ int search(int *array, size_t size, int value, size_t lower_b, size_t higher_b)
 		return (-1);
 	}
 	mid = (lower_b + higher_b) / 2;
-	printf("Serching in array: ");
+	printf("Searching in array: ");
 	print_array(array, lower_b, higher_b);
 
 	if (value > array[mid])
